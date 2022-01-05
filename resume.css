@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,100;1,100&family=Yanone+Kaffeesatz:wght@200;300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
 
 body {
   margin: 0%;
@@ -215,6 +216,7 @@ li::marker {
 
 .page-title {
   border-bottom: 1px solid grey;
+  font-family: 'Rubik', sans-serif
 }
 
 .project-disc {
@@ -259,7 +261,7 @@ li::marker {
 }
 .fa-male:before {
   content: "\f183";
-  margin: 0px 8px 0 0px;
+  
 }
 
 .fa, .fas {
@@ -350,5 +352,15 @@ li::marker {
 .col{
   font-family: 'Josefin Sans', sans-serif;
 }
+
+.icon-align{
+  margin-right: 5px;
+}
+
+.project-headline{
+  font-family: 'Rubik', sans-serif;
+  font-size: 20px;
+}
+
 
 
