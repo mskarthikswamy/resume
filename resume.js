@@ -292,7 +292,7 @@ function checkError() {
   if (checkInputs()) {
     submitForm();
     console.log("submitted");
-    window.location.href = "/resume.html";
+    window.location.href = "https://mskarthikswamy.github.io/resume/resume.html";
   } else {
     alert("NOT VALID - Please enter all the value");
   }
