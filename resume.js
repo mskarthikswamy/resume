@@ -292,6 +292,7 @@ function checkError() {
   if (checkInputs()) {
     submitForm();
     console.log("submitted");
+    window.location.href = "resume/resume.html";
   } else {
     alert("NOT VALID - Please enter all the value");
   }
