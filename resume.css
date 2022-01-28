@@ -1,366 +1,155 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,100;1,100&family=Yanone+Kaffeesatz:wght@200;300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+
+:root {
+  --succes-color: #2ecc71;
+  --error-color: #e74c3c;
+}
+
+* {
+  box-sizing: border-box;
+}
 
 body {
-  margin: 0%;
-  
-}
-
-.w3-container,
-.w3-panel {
-  padding: 0.01em 20px;
-}
-div {
-  border-radius: 5px;
-}
-
-p {
-  border-right: 1px solid rgb(231, 225, 225);
-  padding: 4px 17px 0px 27px;
-}
-.fstyle {
-  margin-left: 40;
-font-family: 'Bebas Neue', cursive;;
-  font-variant: contextual;
-  font-size: 30px;
-  color: black;
-}
-.bio {
+  background-color: #f9fafb;
+  font-family: "Open Sans", sans-serif;
   display: flex;
-
-  font-family: system-ui;
-
-  padding-left: 19px;
-  margin-left: -50;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
 }
 
-h1 {
-  display: block;
-  font-size: 3em;
-  margin-block: 0.67em;
-  margin-inline: 51px 0px;
-  font-weight: bold;
-  font-family: sans-serif;
-  color: rgb(119, 111, 111);
-  margin-inline: 47px 0px;
-
-  /* border-bottom: #5e1313; */
+.container {
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  width: 1000px;
 }
 
-.skill {
-  font-size: revert;
-  font-family: 'Bebas Neue', cursive;
-  color: slategray;
+.row {
+  display: flex;
+  margin-left: -15px;
+  margin-right: -15px;
 }
 
-.colour {
-  background-color: rgb(238, 234, 234);
+.col-md-6 {
+  width: 50%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.col-2 {
+  width: 25%;
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
-.address {
-  display: block;
-  padding: 0px 36px 15px 46px;
-  font-weight: normal;
-  padding: 0px 0px 20px 65px;
-  margin-left: -50;
-}
-.downbio {
-  margin: 13px 2px;
-  display: block;
-  padding: 1px 10px 0px 44px;
-  font-weight: normal;
-  border-right: 1px solid rgb(192, 186, 186);
-}
-.h4 {
-  display: block;
-  /* unicode-bidi: isolate; */
-  margin-block-start: 0.5em;
-  margin-block-end: 0.5em;
-  margin-inline-start: 2em;
-  border-style: inset;
-  border-width: 3px;
-  font-size: 20px;
+h2 {
+  text-align: center;
+  margin: 0 0 20px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 25px;
+  color: #2e7bd3;
 }
 
-#header {
-  height: 40px;
-  width: 100%;
-  background-color: #ffcccc;
-  position: fixed;
-  z-index: 1;
+.form {
+  padding: 30px 40px;
 }
 
-#title {
-  margin-left: 3%;
-}
+.form-control {
+  margin-bottom: 20px;
 
-.image {
-  width: 170px;
-  height: 170px;
-  border-radius: 100pc;
-  margin-left: 50;
-  margin-top: 50;
-}
-#footer {
-  height: 50px;
-  width: 100%;
-  background-color: #ffcccc;
-  clear: both;
   position: relative;
 }
-.edu {
-  font-family: sans-serif;
-  padding: 2px 0px 0px 14px;
+
+.form-control label {
+  color: rgb(110, 104, 104);
+  display: block;
+  margin-bottom: 5px;
 }
 
-.left {
-  height: 1000px;
-  width: 45px;
-  background-color: #e0eeee;
-  float: left;
-  position: fixed;
+.form-control input {
+  border: 2px solid #f0f0f0;
+  border-radius: 4px;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.form-control input:focus {
+  outline: 0;
+  border-color: rgb(80, 77, 77);
+}
+.textbox {
+  border: 2px solid #f0f0f0;
+  border-radius: 4px;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+}
+.subtopic {
+  color: rgb(110, 104, 104);
+  display: block;
+  margin-bottom: 5px;
+}
+.contentbox {
+  width: 100%;
+  height: 200px;
+}
+.form-control.success input {
+  border-color: var(--succes-color);
+}
+
+.form-control.success textarea {
+  border-color: var(--succes-color);
+}
+
+.form-control.error input {
+  border-color: var(--error-color);
+}
+
+.form-control.error textarea {
+  border-color: var(--error-color);
+}
+
+.form-control small {
+  color: var(--error-color);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+}
+
+.gender {
+  width: 49%;
 }
 
 .line {
-  border-bottom: 1px solid grey;
+  color: grey;
 }
 
-.right {
-  height: 1000px;
-  width: 45px;
-  background-color: #e0eeee;
-  float: right;
-  position: inherit;
+.align {
+  padding: 0;
 }
-
-.effect-line {
-  margin: 0 0;
+.form-control.error small {
+  visibility: visible;
 }
-
-.stuff {
-  display: inline-block;
-  margin-top: 6px;
-  margin-left: 55px;
-  width: 75%;
-  height: 1000px;
-}
-
-
-
-.head {
+.form button {
+  cursor: pointer;
+  background-color: #3498db;
+  border: 2px solid #3f8cc0;
+  border-radius: 4px;
+  color: rgb(243, 234, 234);
+  display: block;
+  padding: 10px;
   font-size: 16px;
-
-  font-family: system-ui;
-}
-
-#name {
-  font-family: Sacramento;
-  float: right;
-  margin-top: 10px;
-  margin-right: 4%;
-}
-
-a {
-  color: black;
-  text-decoration: none;
-}
-
-li::marker {
-    color: rgb(255 255 255);
-}
-.blue-link {
-  color: rgb(60 79 90);
-}
-
-.description {
-  display: block;
-  margin-block-start: -0.67em;
-  margin-block-end: 1.33em;
-  margin-inline-start: 38px;
-  margin-inline-end: 0px;
-  font-weight: bold;
-}
-.underline {
-  display: block;
-  /* unicode-bidi: isolate; */
-  margin-block-start: 0.5em;
-  margin-block-end: 0.5em;
-  margin-inline-start: 2em;
-  border-style: inset;
-  border-width: 1px;
-  font-size: 20px;
-}
-
-.underline-effect {
-  display: block;
-  /* unicode-bidi: isolate; */
-  margin-block-start: 0.5em;
-  margin-block-end: 0.5em;
-  margin-inline-start: 0em;
-  border-style: inset;
-  border-width: 1px;
-  font-size: 20px;
-}
-.d-block {
-  padding-left: 19px;
-}
-.digi-skills {
-  display: flex;
-
-  font-family: system-ui;
-
-  margin: 0;
-  padding: 0px 0px 0px 13px;
-}
-
-.page-title {
-  border-bottom: 1px solid grey;
-  font-family: 'Rubik', sans-serif
-}
-
-.project-disc {
-  padding: 0px 0px 0 37px;
-}
-
-.pump {
-  padding: 0 0 0 34px;
-}
-
-.pic {
-  padding: 28px 0 0px 30px;
-}
-
-@media only screen and (max-width: 991px) {
-  .digi-skills {
-    display: block;
-  }
-  .bio {
-    display: block;
-    display: block;
-    text-align: center;
-  }
-}
-.left,
-.right {
-  display: none;
-}
-.stuff {
+  margin-top: 20px;
   width: 100%;
-  margin-left: 10px;
 }
 
-.fa-envelope:before {
-  content: "\f0e0";
-  margin: 2px;
-  color: black;
+@media screen and (max-width: 767px) {
+  .col-12 {
+    width: 100%;
+  }
 }
-.fa-linkedin:before {
-  content: "\f08c";
-  color: cornflowerblue;
-}
-.fa-male:before {
-  content: "\f183";
-  
-}
-
-.fa, .fas {
-    font-family: "Font Awesome 5 Pro";
-    font-weight: 900;
-    margin FONT-VARIANT: JIS04;
-    margin: 0 3px 1px 0px;
-}
-.fa-globe-asia:before {
-    content: "\f57e";
-    color: darkblue;
-}
-
-.far {
-    font-weight: 400;
-    margin: 0 4px 0 0;
-}
-
-.fa, .fas {
-    font-family: "Font Awesome 5 Pro";
-    font-weight: 900;
-    margin FONT-VARIANT: JIS04;
-    margin: 1px 12px 0px -2px;
-}
-
-.fa-angle-double-right:before {
-    content: "\f101";
-    color: black;
-    margin: 0 5px 0 0;
-}
-.fa-laptop-code:before {
-    content: "\f5fc";
-    font-size: larger;
-    color: #ad1ef3;
-}
-.fab {
-    font-family: "Font Awesome 5 Brands";
-    color: slategray;
-}
-.fa-user-graduate:before {
-    content: "\f501";
-    color: slategray;
-    font-size: -webkit-xxx-large;
-}
-.edu-style{
-      margin-left: 3px;
-    font-family: 'Bebas Neue', cursive;
-    font-variant: contextual;
-    font-size: 30px;
-    color: black;
-}
-}
-.fa-university:before {
-    content: "\f19c";
-    font-size: xx-large;
-}
-.fa-school:before {
-    content: "\f549";
-    font-size: x-large;
-}
-
-.work
-{
-    font-family: 'Bebas Neue', cursive;
-    font-size: 30;
-}
-.fa-briefcase:before {
-    content: "\f0b1";
-    color: tomato;
-}
-
-.project{
-  
-    border-right: 1px solid rgb(231, 225, 225);
-    padding: 4px 17px 0px 38px;
-
-}
-.fa-university:before {
-    content: "\f19c";
-    font-size: x-large;
-}
-
-.exfont {
-    font-family: 'Bebas Neue', cursive;
-    font-size: xx-large;
-}
-
-.col{
-  font-family: 'Josefin Sans', sans-serif;
-}
-
-.icon-align{
-  margin-right: 5px;
-}
-
-.project-headline{
-  font-family: 'Rubik', sans-serif;
-  font-size: 20px;
-}
-
-
-
